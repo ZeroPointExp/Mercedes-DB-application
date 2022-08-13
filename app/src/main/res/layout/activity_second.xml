@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".SecondActivity">
+
+    <View
+        android:id="@+id/slideLine"
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white_thighs_of_a_frightened_nymph"
+        tools:ignore="MissingConstraints"
+        >
+
+    </View>
+
+    <View
+        android:id="@+id/left_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/black_amber"
+        app:flow_verticalStyle="spread"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/slideLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </View>
+
+    <View
+        android:id="@+id/right_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:flow_verticalStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/slideLine"
+        app:layout_constraintVertical_bias="1.0"
+        android:background="@color/Abdel_Kerim_beards"
+        >
+    </View>
+
+    <TextView
+        android:id="@+id/registration_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/slideLine"
+        app:flow_verticalStyle="spread"
+        android:fontFamily="@font/saimaaifasanslight"
+        android:text="@string/registration"
+        android:textSize="30dp"
+        android:textColor="@color/Abdel_Kerim_beards"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/autorization_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/slideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:flow_verticalStyle="spread"
+        android:fontFamily="@font/saimaaifasanslight"
+        android:text="@string/autorization"
+        android:textSize="30dp"
+        android:textColor="@color/black_amber"
+        >
+
+    </TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

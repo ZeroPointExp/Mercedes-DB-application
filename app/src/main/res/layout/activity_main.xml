@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_amber"
+    tools:context=".MainActivity"
+   >
+
+    <View
+
+        android:id="@+id/mercedesLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        android:background="@drawable/ic_mercedes_benz_9"
+        android:visibility="visible"
+        >
+    </View>
+
+    <!-- Packed Chain -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/PackedChainViewHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/mercedesLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="95dp"
+        android:fontFamily="@font/kintamani"
+        android:textSize="25sp"
+        android:text="@string/Le"
+        android:textColor="@color/Abdel_Kerim_beards"
+
+        >
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/packedChainView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kintamani"
+        android:textSize="25sp"
+        android:text="@string/meilleur"
+        android:textColor="@color/Abdel_Kerim_beards"
+        app:layout_constraintTop_toTopOf="@id/PackedChainViewHeader"
+        app:layout_constraintStart_toEndOf="@id/PackedChainViewHeader"
+        android:layout_marginStart="2dp"
+        >
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/packedChainView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kintamani"
+        android:textSize="25sp"
+        android:text="@string/ou"
+        android:textColor="@color/Abdel_Kerim_beards"
+        app:layout_constraintTop_toTopOf="@id/PackedChainViewHeader"
+        app:layout_constraintStart_toEndOf="@id/packedChainView2"
+        android:layout_marginStart="6dp"
+
+        >
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/packedChainView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kintamani"
+        android:textSize="25sp"
+        android:text="@string/rien"
+        android:textColor="@color/Abdel_Kerim_beards"
+        app:layout_constraintTop_toTopOf="@id/PackedChainViewHeader"
+        app:layout_constraintStart_toEndOf="@id/packedChainView3"
+        android:layout_marginStart="6dp"
+        >
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

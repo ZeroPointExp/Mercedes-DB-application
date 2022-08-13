@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mercedes_DB_UI</string>
+    <string name="Le">\tLe\t</string>
+    <string name="meilleur">\tmeilleur\t</string>
+    <string name="ou">ou</string>
+    <string name="rien">\trien\t</string>
+    <string name="registration">R\nE\nG\n I\nS\nT\nR\nA\nT\n I\nO\nN</string>
+    <string name="autorization">A\nU\nT\nO\nR\n I\nZ\nA\nT\n I\nO\nN</string>
+
+</resources>
