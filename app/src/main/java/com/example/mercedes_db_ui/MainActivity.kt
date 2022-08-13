@@ -7,23 +7,20 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.animation.AccelerateDecelerateInterpolator
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import android.view.animation.RotateAnimation
+import android.view.animation.*
 import android.widget.TextView
 import androidx.core.view.isVisible
 
 
 class MainActivity : AppCompatActivity() {
-        lateinit var mercedesLogo : View
-        lateinit var phraseLe : TextView
-        lateinit var phraseMeilleur : TextView
-        lateinit var phraseOu : TextView
-        lateinit var phraseRien : TextView
+        private lateinit var mercedesLogo : View
+        private lateinit var phraseLe : TextView
+        private lateinit var phraseMeilleur : TextView
+        private lateinit var phraseOu : TextView
+        private lateinit var phraseRien : TextView
         private lateinit var animation : Animation
         private lateinit var spinAnimation : RotateAnimation
-
+        private lateinit var animationSet : AnimationSet
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +32,10 @@ class MainActivity : AppCompatActivity() {
         phraseOu = findViewById(R.id.packedChainView3)
         phraseRien = findViewById(R.id.packedChainView4)
 
+        //анимация лого
+        mercedesLogo.startAnimation(logoAnimation())
 
-
-        animation = AnimationUtils.loadAnimation(this, R.anim.mercedes_logo)
-        mercedesLogo.startAnimation(animation)
-
+        //анимация фразы
         animation = AnimationUtils.loadAnimation(this, R.anim.le)
         phraseLe.startAnimation(animation)
 
@@ -52,29 +48,22 @@ class MainActivity : AppCompatActivity() {
         animation = AnimationUtils.loadAnimation(this, R.anim.rien)
         phraseRien.startAnimation(animation)
 
+    }
 
+    private fun logoAnimation() : AnimationSet {
+        animationSet = AnimationSet(true)
+        animation = AnimationUtils.loadAnimation(this, R.anim.mercedes_logo)
+        animationSet.addAnimation(animation)
+        animationSet.addAnimation(spinLogo())
 
-
-
-        mercedesLogo.setOnClickListener {
-            //прокрутка
-
-            it.clearAnimation()
-            it.startAnimation(spinLogo())
-           // spinAnimation = RotateAnimation(0.0f, 360.0f, Animation.RELATIVE_TO_SELF, 0.5f,
-            //                                Animation.RELATIVE_TO_SELF, 0.5f)
-           // spinAnimation.duration = 3000
-
-            //it.startAnimation(spinAnimation)
-
-        }
-
+        return animationSet
     }
 
 
     private fun spinLogo() : RotateAnimation {
        spinAnimation = RotateAnimation(0.0f, 240.0f, Animation.RELATIVE_TO_SELF,
            0.5f, Animation.RELATIVE_TO_SELF, 0.5f )
+        spinAnimation.startOffset = 5500
         spinAnimation.duration = 3000
 
         spinAnimation.setAnimationListener(object : Animation.AnimationListener{

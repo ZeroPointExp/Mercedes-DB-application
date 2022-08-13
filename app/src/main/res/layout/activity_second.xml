@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/white_thighs_of_a_frightened_nymph"
+        android:background="@color/Abdel_Kerim_beards"
         tools:ignore="MissingConstraints"
         >
 
@@ -39,7 +39,7 @@
         app:flow_verticalStyle="spread"
         app:layout_constraintStart_toEndOf="@id/slideLine"
         app:layout_constraintVertical_bias="1.0"
-        android:background="@color/Abdel_Kerim_beards"
+        android:background="@color/white_thighs_of_a_frightened_nymph"
         >
     </View>
 
@@ -55,7 +55,7 @@
         android:fontFamily="@font/saimaaifasanslight"
         android:text="@string/registration"
         android:textSize="30dp"
-        android:textColor="@color/Abdel_Kerim_beards"
+        android:textColor="@color/white_thighs_of_a_frightened_nymph"
         >
 
     </TextView>
