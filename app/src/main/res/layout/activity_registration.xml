@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_weight="2">
+
+    <custom_view.RegistrationCustomView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:direction="left"
+        app:color="@color/black_registration"
+        app:line_color="@color/white_thighs_of_a_frightened_nymph"
+        android:layout_weight="1"
+        android:background="@color/zinc_with_striking_shades_of_patina_and_granite"
+
+        >
+
+    </custom_view.RegistrationCustomView>
+
+    <custom_view.RegistrationCustomView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:direction="right"
+        app:color="@color/black_registration"
+        app:line_color="@color/white_thighs_of_a_frightened_nymph"
+        android:layout_weight="1"
+        android:background="@color/right_registration"
+        >
+    </custom_view.RegistrationCustomView>
+
+</LinearLayout>

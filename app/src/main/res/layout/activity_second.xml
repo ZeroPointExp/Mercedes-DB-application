@@ -54,7 +54,7 @@
         app:flow_verticalStyle="spread"
         android:fontFamily="@font/saimaaifasanslight"
         android:text="@string/registration"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/white_thighs_of_a_frightened_nymph"
         >
 
@@ -71,7 +71,7 @@
         app:flow_verticalStyle="spread"
         android:fontFamily="@font/saimaaifasanslight"
         android:text="@string/autorization"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/black_amber"
         >
 

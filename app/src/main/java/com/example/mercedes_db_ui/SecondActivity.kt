@@ -13,7 +13,8 @@ class SecondActivity : AppCompatActivity() {
     lateinit var slideLine : View
     lateinit var rightViewAutorization : View
     lateinit var leftViewRegistration : View
-    lateinit var viewText : TextView
+    lateinit var viewTextRight : TextView
+    lateinit var viewTextLeft : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,16 +38,33 @@ class SecondActivity : AppCompatActivity() {
         animation = AnimationUtils.loadAnimation(this, R.anim.slide_down_view_left_registratin)
         leftViewRegistration.startAnimation(animation)
 
-        viewText = findViewById(R.id.registration_text)
+        viewTextLeft = findViewById(R.id.registration_text)
         animation = AnimationUtils.loadAnimation(this, R.anim.autoriz_reg_anim)
-        viewText.startAnimation(animation)
+        viewTextLeft.startAnimation(animation)
 
-        viewText = findViewById(R.id.autorization_text)
+        viewTextRight = findViewById(R.id.autorization_text)
         animation = AnimationUtils.loadAnimation(this, R.anim.autoriz_reg_anim)
-        viewText.startAnimation(animation)
+        viewTextRight.startAnimation(animation)
+
+
 
     }
 
-
-
+//    //определяем взаимодействие
+//    override fun onResume() {
+//        super.onResume()
+//
+//        viewTextLeft.setOnClickListener {
+//            //очищение пред. анимации
+//            it.clearAnimation()
+//            //анимация закрытия
+//            it.startAnimation(Registration())
+//        }
+//
+//    }
+//
+//    private fun Registration () : Animation {
+//
+//
+//    }
 }
